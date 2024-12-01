@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item active"> <a class="nav-link" href="form.html">Форма <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Заполните данные данные</h1>
+
+        <form action="https://f1ugey.github.io/parse" method="post">
+            <div class="form-group">
+                <label for="site">Ресурс:</label>
+                <select class="form-control" id="site" name="site">
+                    <option value="hh">HH</option>
+                    <option value="github">GitHub</option>
+                </select>
+            </div>
+
+            <div id="hh-fields" class="site-fields">
+                <div class="form-group">
+                    <label for="hh-keyword">Ключевое слово:</label>
+                    <input type="text" class="form-control" id="hh-keyword" name="hh_keyword" placeholder="Например, Front-end разработчик">
+                </div>
+                <div class="form-group">
+                    <label for="hh-location">Местоположение:</label> <input type="text" class="form-control" id="hh-location" name="hh_location" placeholder="Например, Москва">
+                </div>
+            </div>
+
+            <div id="github-fields" class="site-fields" style="display: none;">
+                <label for="github-repo">Репозиторий:</label>
+                <input type="text" class="form-control" id="github-repo" name="github_repo" placeholder="Например, facebook/react">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">Отправить</button>
+        </form>
+    </div>
+
+
+
+
+</body>
+</html>
